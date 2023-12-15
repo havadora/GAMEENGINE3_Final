@@ -12,12 +12,20 @@ public class SceneManagers : MonoBehaviour
     [SerializeField] private GameObject Attcking;
     [SerializeField] private GameObject Back;
     [SerializeField] private GameObject Pause;
+    InforAllies allies;
+    InforEnemy enemy;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
             Pause.SetActive(true);
         }
+
+        /*if(allies.GetHeath() <= 0)
+        {
+
+        }*/
+
     }
     public void Menu(string Scene_name)
     {
@@ -93,7 +101,7 @@ public class SceneManagers : MonoBehaviour
         DirectoryInfo[] cDirs = new DirectoryInfo(@"D:\GAMEENGINE3_Exercise").GetDirectories();
         using (StreamWriter sw = new StreamWriter("Save.txt"))
         {
-            sw.WriteLine(scene);
+            sw.WriteLine("ss");
         }
     }
         
