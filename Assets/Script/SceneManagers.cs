@@ -67,12 +67,13 @@ public class SceneManagers : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-        EditorApplication.ExitPlaymode();
+        //EditorApplication.ExitPlaymode();
     }
 
     public void Flee()
     {
-        using (StreamReader sr = new StreamReader("Save.txt"))
+        //SceneManager.LoadScene("FirstScene");
+        using (StreamReader sr = new StreamReader(@"D:\MultiplayerSystem_Final\GAMEENGINE3_Final\Save.txt"))
         {
             string LastScene;
 
